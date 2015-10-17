@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<header><h1>PRAC-03 Formulario</h1></header>
+	<main>
+		<section>
+			<form action"#" >
+                <fieldset>
+                <fieldset >
+                    <legend>Personal data</legend>
+				    <input type="text" placeholder="name" maxlength="50" required/>
+				    <input type="text" placeholder="surname" maxlength="50" required/>
+                    <input type="text" placeholder="lastname" maxlength="50" />
+                </fieldset >
+                <fieldset >
+                    <legend>Address</legend>
+				    <input type="text" placeholder="street" maxlength="150" required/>
+				    <input type="number" placeholder="number" maxlength="3" min="1" max="300" required/>
+                    <input list="city" placeholder="city" required>
+                    <datalist id="city">
+                        <option value="Le&oacute;n"/>
+                        <option value="Zamora"/>
+                        <option value="Salamanca"/>
+                    </datalist>
+                    <input list="province" placeholder="province" required>
+                    <datalist id="provincia">
+                        <option value="Le&oacute;n"/>
+                        <option value="Zamora"/>
+                        <option value="Salamanca"/>
+                    </datalist>
+                    <input type="number" placeholder="Postal Code" maxlength="5" min="10000" max="50000" required/>
+                </fieldset>
+                
+                <fieldset >
+                    <legend>Personal data 2</legend>
+                    
+                    <input type="datetime-local" placeholder="birthdate"  min=”1970-01-01” max=”2015-10-17” required/>
+                    <input type="number" placeholder="age" step="5" min="0" max="110" required/>
+                    <output name="birth">
+                    <input type="number" placeholder="weigth" step="5" min="5" max="110"/>
+                </fieldset >
+                <button >send</button>
+                </fieldset>
+			</form>
+		</section>
+	</main>
+	<aside/>
+	<footer>Abel Prieto Ben&eacute;itez &copy;2015</footer>
+</body>
+</html>
