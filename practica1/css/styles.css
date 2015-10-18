@@ -1,0 +1,29 @@
+#header
+{
+	 background-color: #b0c4de;
+}
+#content
+{
+	
+}
+#col1
+{
+}
+#col2
+{
+}
+#footer
+{
+	 background-color: coral;
+}
+
+.border
+{
+	border: 0px solid black;
+}
+.col
+{
+	float:left;
+	background-color: orange;
+	width: 50%;
+}
