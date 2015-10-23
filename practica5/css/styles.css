@@ -1,21 +1,40 @@
 body
 {
-	border:1px solid black;
 	width: 960px;
+}
+p
+{
+	text-align: justify;
 }
 #control
 {
-	float:right;
+	float: right;
 }
-
+#carrusel
+{
+	overflow: hidden;
+}
+#slide
+{
+	display: inline-block;
+	overflow: inherit;
+}
 .block
 {
+	padding: 1%;
 	float:left;
-	width:20%;	
+	width:22%;
+	height:60%;
 }
-
 .border
 {
-	border-left:1px solid grey;
+	border-right:1px solid grey;
+}
+
+.picture
+{
+	margin: 0 auto;
+	width: 80%;
+	height: 80%;
 }
 
