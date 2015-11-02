@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<title>Pr&aacute;ctica HTML5 Formulario</title>
 </head>
 <body>
-	<header><h1>PRAC-03 Formulario</h1></header>
+	<header><h1>Pr&aacute;ctica HTML5 Formulario</h1></header>
 	<main>
 		<section>
-			<form action"#" >
+			<form action"#" onsubmit="return false" 
+							oninput="	var calculateAge= parseInt(birthDate.value)-parseInt(currentDate.value);
+										if(!isNaN(calculateAge) && calculateAge > 0)
+										{
+											age.value=calculateAge;
+										}else{age.value=' Please, write a valid date. Thanks.'}">
                 <fieldset>
                 <fieldset >
                     <legend>Personal data</legend>
@@ -32,14 +39,14 @@
                     </datalist>
                     <input type="number" placeholder="Postal Code" maxlength="5" min="10000" max="50000" required/>
                 </fieldset>
-                
                 <fieldset >
                     <legend>Personal data 2</legend>
-                    
-                    <input type="datetime-local" placeholder="birthdate"  min=”1970-01-01” max=”2015-10-17” required/>
-                    <input type="number" placeholder="age" step="5" min="0" max="110" required/>
-                    <output name="birth">
                     <input type="number" placeholder="weigth" step="5" min="5" max="110"/>
+                    <input id="currentDate" type="number" value="2015" min="1911"/>
+                    <input id="birthDate" type="date" placeholder="birthdate"  min=”1970-01-01” max=”2015-11-02” required/>
+                    Age: <output name="age" 
+                    		placeholder="age"  
+                    		onforminput=""></output>
                 </fieldset >
                 <button >send</button>
                 </fieldset>
