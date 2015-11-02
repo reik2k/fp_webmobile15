@@ -1,0 +1,115 @@
+/*ELEMENTS*/
+h1,h2,h3,p
+{
+    font-family: Sans-Serif, serif, Georgia;
+}
+p
+{
+	color:#807e7e;
+}
+body
+{
+	width:960px;
+	margin: 0 auto;
+}
+ul
+{
+	float: right;
+	list-style-type: none;
+}
+li
+{
+	float:left;
+	border: 5px solid #000;
+
+}
+li:hover
+{
+	color:#efe85d;
+}
+hr{
+	border: 3px solid coral;
+}
+/*IDs*/
+#header
+{
+	background-color: #000;
+	color: #fff;
+	overflow: hidden;
+}
+#logo
+{
+	float:left;
+	padding: 5px;
+	font-size: 10px;
+}
+#content
+{
+	padding-top: 10px;
+}
+#aside
+{
+	float: right;
+	width: 30%;
+}
+#titleAside
+{
+	background-color: #ebe5e5;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 1.5em;
+}
+#newsContainer
+{
+	background-color: #ebe5e5;
+	margin-top: 5px;
+}
+#footer
+{
+	clear:both;
+	background: #000;
+	color: white;
+	border-top: 10px solid white;
+	text-align: center;
+	padding: 50px;
+}
+/*CLASSES*/
+.article
+{
+	overflow: hidden;
+	float: left;
+	width: 65%;
+	background-color: #ebe5e5;
+	padding: 10px;
+	
+}
+.news
+{
+	width: 100%;
+	padding: 5px;
+	overflow: hidden;
+}
+.news:hover
+{
+	background-color: white;
+}
+.picArticle
+{
+	width: 100%;
+}
+.picture
+{
+	float:left;
+	margin-right: 5px;	
+}
+.titleNews
+{
+	font-size: 1.3em;
+}
+.subTitleNews
+{
+	font-size: 1em;
+	font-style: italic;
+
+}
+

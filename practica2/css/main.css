@@ -1,0 +1,49 @@
+body
+{
+	background-color: coral;
+}
+#content
+{
+	position: relative;
+	margin: 0 auto;
+	width: 700px;
+	height: 400px;
+	padding: 5px;
+	background: url("../pictures/environment.jpg") no-repeat;
+	
+}
+
+#pos1
+{
+	font-size:40px;
+	left:50px;
+}
+#pos2
+{
+	left:160px; 
+	bottom:300px;
+}
+#pos3
+{
+	font-size:80px;
+	left:200px;
+	bottom:80px;
+}
+#pos4
+{
+	left:120px;
+	bottom:180px;
+	
+}
+#pos5
+{
+	font-size:60px;
+	left: 500px;
+	bottom:30px;
+}
+
+.snow
+{
+	position: absolute;
+	color: #ffffff;
+}
