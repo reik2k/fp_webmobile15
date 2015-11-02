@@ -1,0 +1,61 @@
+/*ELEMENTS*/
+h1,h2,h3
+{
+	font-family: serif,courier;
+	line-height: 0.6;
+}
+
+p
+{
+	font-family: sans-serif;
+	font-size: 0.8em;
+}
+
+body
+{
+	width: 960px;
+	margin: 0 auto;
+}
+ul
+{
+	list-style-type: none;
+}
+li
+{
+	padding: 10px;
+}
+hr
+{
+	height: 3%;
+	color: #9f9c9c;
+}
+
+/*IDs*/
+
+#content
+{
+	overflow: hidden;
+}
+
+/*CLASSES*/
+.articleText
+{
+	padding: 5px;
+}
+.articlePicture
+{
+	float:right;
+	width: 100px;
+	height: 100px;
+}
+.articleSubtitle
+{
+	display: inline;
+	color: #9f9c9c;
+	font-size: 0.8em;
+}
+.articleDateTime
+{
+	display: inline;
+	color:#f83a3a;
+}
