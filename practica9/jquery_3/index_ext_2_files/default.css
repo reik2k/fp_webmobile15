@@ -1,0 +1,300 @@
+/* GoalApp Default CSS */
+
+body {
+    background: #FFF;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#videoDIV {
+    position: relative;
+    background-color: #000;
+}
+
+#bannerDIV {
+    padding: 0;
+    margin: 0px;
+    height: 60px;
+    overflow: hidden;
+}
+
+#preClipView {
+    background: #000;
+    position: absolute;
+    top: 0;
+}
+
+#postClipView {
+    position: absolute;
+    font-size: 9px;
+    background-color: #000000;
+    visibility: hidden;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+#shareView {
+    position: absolute;
+    visibility: hidden;
+    top: 0px;
+}
+
+#shareView .image {
+    vertical-align: middle;
+}
+
+#shareView .label {
+    background-color: #44629e;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#shareCopyLabel {
+    font-size: 12px;
+}
+
+#shareView .input {
+    width: 50%;
+    color: #000000;
+}
+
+.cursorPointer {
+    cursor: pointer;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+.cursorPointer:hover {
+    text-shadow: 0px 0px 5px #ffffff;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    z-index: 120;
+    text-align: center;
+    background: #000;
+    top: 0;
+}
+
+.loader > img {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    margin-top: -55px;
+    left: 50%;
+    right: 50%;
+    margin-left: -42px;
+}
+
+#navbar {
+    z-index: 111;
+}
+
+#wrapper {
+    background-color: black;
+}
+
+#progressOverlay {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    bottom: 0;
+    z-index: 201;
+}
+
+#videoError {
+    background-color: #2d2f31;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    display: none;
+    z-index: 111;
+}
+
+#videoErrorLabel {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    margin-top: -1em;
+    font-size: 12px;
+    width: 100%;
+}
+
+.thumbImage {
+    width: 98%;
+    border: none;
+    padding-left: 1%;
+}
+
+.imageDiv {
+    width: 48%;
+    float: left;
+    line-height: 12px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1%;
+}
+.postClipPlayButton {
+    cursor: pointer;
+    width: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -10px;
+}
+
+.one-edge-shadow {
+    line-height: 11px;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 0px 3px 0px 2px;
+    margin-top: -1px;
+    height: 22px;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+.imageDiv:hover {
+    background-color: rgba(69, 69, 69, 0.5);
+}
+
+.postClipHoverDiv{
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    color: #000;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 2%;
+    right: 2%;
+    background-color: #fff;
+    visibility:hidden;
+    -webkit-transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    margin:2% 0 2% 0;
+    overflow:hidden;
+}
+
+.imageDiv:hover .postClipHoverDiv{
+    top:0%;
+    opacity: 1;
+    visibility:visible;
+}
+
+.postClipHoverDiv label{
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    color: rgb(60, 58, 58);
+    cursor:pointer;
+}
+
+.imageDiv:hover .one-edge-shadow{
+    visibility:hidden;
+}
+
+.postClipTime {
+    float: left;
+    background-color: rgb(98, 96, 96);
+    padding: 2px 3px 0 3px;
+    margin-top: 3px;
+    margin-left: 2%;
+    margin-right: 1%;
+    color: #fff;
+    border: none;
+    height: 14px;
+    cursor:pointer;
+}
+
+.postClipLittlePlay {
+    float: left;
+    margin-top: 3px;
+    background-color: rgb(87, 85, 85);
+    height: 10px;
+    padding: 3px 3px 3px 5px;
+    cursor:pointer;
+}
+
+#facebookContainer {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 60%;
+    margin-left: auto;
+    max-width: 400px;
+    margin-right: auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    height: 280px;
+    margin-top: -15px;
+}
+
+#counter {
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    position: relative;
+    top: 5px;
+}
+
+@media screen and (min-width: 250px) and (max-width: 510px) {
+    #facebookContainer {
+        height:160px;
+        width: 85%;
+        margin-top: -5px;
+    }
+
+    #imageDiv2, #imageDiv3{
+        display:none;
+    }
+
+    #counter{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 250px)
+{
+    #facebookContainer {
+        height: 120px;
+        width: 75%;
+        margin-top: -3px;
+    }
+
+    #imageDiv2, #imageDiv3{
+        display:none;
+    }
+
+    #counter {
+        font-size: 9px;
+        top: 1px;
+    }
+}
+
+

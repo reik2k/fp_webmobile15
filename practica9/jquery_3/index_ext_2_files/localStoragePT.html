@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://static.donation-tools.org/widgets/V3/JSI/localStoragePT.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+</head>
+
+<body mp0="1" dpx0="1">
+    <script type="text/javascript">
+        function Message(key, value, msgType, callback) {
+            this.key = key;
+            this.value = value;
+            this.msgType = msgType;
+            try {
+                if (typeof callback === "function") this.callback = callback;
+            } catch (e) {}
+        }
+
+        function fnGetDomain(url) {
+            try {
+                url = (url.indexOf("http") == -1) ? "http://" + url : url;
+                if (url.indexOf('///') != -1) {
+                    return "";
+                }
+                if (url.indexOf('/') != -1) {
+                    var str = url.match(/:\/\/(.[^/]+)/)[1];
+                    var strsplit = str.split(".");
+                    if (strsplit.length > 2) {
+                        str = str.replace(strsplit[0] + '.', '');
+                    }
+                    return str;
+                }
+            } catch (e) {
+                return "";
+            }
+            return "";
+        }
+        var anonFunc = function(event) {
+            try {
+                var message = new Message();
+                message = JSON.parse(event.data);
+                var deactivate = localStorage.getItem("IROBDEACTIVATE");
+                deactivate = isNaN(deactivate) ? 0 : deactivate;
+                var now = new Date();
+                if (deactivate > now.getTime()) return;
+                switch (message.msgType.toString().toLowerCase()) {
+                    case 'get':
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem(message.key.toString()),
+                            msgType: 'get'
+                        }), event.origin);
+                        break;
+                    case 'check':
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem(message.key.toString()),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+
+
+                    case 'removesite':
+                        localStorage.removeItem(message.key);
+                        event.source.postMessage("Done.", event.origin);
+                        break;
+
+
+                    case 'deactivate':
+                        localStorage.setItem("IROBDEACTIVATE", message.value);
+                        break;
+                    case 'set':
+                        localStorage.setItem(message.key, message.value);
+                        event.source.postMessage("Done.", event.origin);
+                        break;
+                    case 'coupon':
+                        localStorage.setItem(fnGetDomain(message.key), message.value);
+                        event.source.postMessage("Done.", event.origin);
+                        window.top.location = message.key;
+                        break;
+                    case 'setcredentials':
+                        localStorage.setItem("IROBCREDENTIALS", message.value)
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBCREDENTIALS"),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'getcredentials':
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBCREDENTIALS"),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'setactive':
+                        try {
+                            var sets = JSON.parse(localStorage.getItem("IROBUSERSETTINGS_" + message.key));
+                            sets[0].IsActive = message.value;
+                            localStorage.setItem("IROBUSERSETTINGS_" + message.key, JSON.stringify(sets));
+                        } catch (e) {}
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBUSERSETTINGS_" + message.key),
+                            msgType: "getusersettings"
+                        }), event.origin);
+                        break;
+                    case 'setactiveui':
+                        try {
+                            var sets = JSON.parse(localStorage.getItem("IROBUSERSETTINGS_" + message.key));
+                            sets[0].SHOW_UI = message.value;
+                            localStorage.setItem("IROBUSERSETTINGS_" + message.key, JSON.stringify(sets));
+                        } catch (e) {}
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBUSERSETTINGS_" + message.key),
+                            msgType: "getusersettings"
+                        }), event.origin);
+                        break;
+                    case 'getactive':
+                        var res = -1;
+                        try {
+                            var sets = JSON.parse(localStorage.getItem("IROBUSERSETTINGS_" + message.key));
+                            res = parseInt(sets[0].IsActive);
+                        } catch (e) {}
+                        event.source.postMessage(JSON.stringify({
+                            value: res,
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'setusersettings':
+                        localStorage.setItem("IROBUSERSETTINGS_" + message.key, message.value)
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBUSERSETTINGS_" + message.key),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'getusersettings':
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBUSERSETTINGS_" + message.key),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'setsettings':
+                        localStorage.setItem("IROBSETTINGS_" + message.key, message.value)
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBSETTINGS_" + message.key),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    case 'getsettings':
+                        event.source.postMessage(JSON.stringify({
+                            value: localStorage.getItem("IROBSETTINGS_" + message.key),
+                            msgType: message.msgType
+                        }), event.origin);
+                        break;
+                    default:
+                        break;
+                }
+            } catch (e) {}
+        }
+        if (document.addEventListener) {
+            window.addEventListener('message', anonFunc, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onmessage', anonFunc);
+        }
+    </script>
+
+
+<div id="__if72ru4sdfsdfruh7fewui_once" style="display:none;"></div><div id="__zsc_once"></div></body></html>

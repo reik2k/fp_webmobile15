@@ -1,0 +1,877 @@
+/* CAROUSEL CSS  */
+div#navigationBar {
+    height: 20px;
+    color: #fff;
+    text-align: left;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    background: #fff;
+    top: 273px;
+}
+
+a#backButton {
+    display: block;
+    width: 22px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    background: #02529b url(../../../../../i/Eplayer/back_new.png) no-repeat 0 0;
+    border-left: 1px solid #d8d8d8;
+    cursor: pointer;
+}
+
+a#backButton:hover {
+    background: #02529b url(../../../../../i/Eplayer/back_new.png) no-repeat 0 -22px;
+}
+
+div#navigationBar div.tabHolder span.selected {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    float: left;
+    font: normal 10px/22px Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0 0 0 5px;
+    cursor: default;
+    letter-spacing: -1px;
+    position: absolute;
+    width: 300px;
+}
+
+div#navigationBar div.tabHolder a {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    margin: 0;
+    padding: 0 0 0 0;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    float: left;
+    font: normal 10px/22px Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+div#navigationBar div.tabHolder a span {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    float: left;
+}
+
+div#navigationBar div.tabHolder a.ver1 {
+    z-index: 10;
+}
+
+div#navigationBar div.tabHolder a.ver2 {
+    z-index: 9;
+    margin-left: -5px;
+}
+
+div#navigationBar div.tabHolder a.ver3 {
+    z-index: 8;
+    margin-left: -5px;
+}
+
+div#navigationBar div.tabHolder a.ver1 span {
+    background: #02529b;
+}
+
+div#navigationBar div.tabHolder a.ver2 span {
+    background: #048ccb;
+    padding-left: 5px;
+}
+
+div#navigationBar div.tabHolder a.ver3 span {
+    background: #49c5d9;
+    padding-left: 5px;
+}
+
+div#navigationBar div.tabHolder a span.tri {
+    display: inline-block;
+    float: left !important;
+    margin: 0;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 10px solid transparent !important;
+    border-top: 10px solid transparent !important;
+}
+
+div#navigationBar div.tabHolder a span.tri-white {
+    display: inline-block;
+    float: left !important;
+    margin: 0;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 10px solid transparent !important;
+    border-top: 10px solid transparent !important;
+    border-left: 6px solid #fff !important;
+}
+
+div#navigationBar div.tabHolder a.ver1 span.tri {
+    border-left: 6px solid #02529b;
+    background: transparent;
+}
+
+div#navigationBar div.tabHolder a.ver2 span.tri {
+    border-left: 6px solid #048ccb;
+    background: transparent;
+}
+
+div#navigationBar div.tabHolder a.ver3 span.tri {
+    border-left: 6px solid #49c5d9;
+    background: transparent;
+}
+
+/*
+div#navigationBar div.tabHolder a:hover span{
+  background: #fff;
+  color: #000;
+  }
+*/
+div#navigationBar div.tabHolder a:hover span.tri {
+    border-left: 6px solid #fff;
+}
+
+div#carousel {
+
+    height: 77px;
+    /*border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;*/
+    border-bottom: 2px solid #49c5d9;
+}
+
+a#arrPrev {
+    display: block;
+    width: 22px;
+    height: 77px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat 0 0;
+    float: left;
+}
+
+a#arrPrev:hover, a#arrPrev:focus {
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat 0 -77px;
+}
+
+.longLeftButton {
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat 0 0 !important;
+    height: 127px !important;
+}
+
+.longRightButton {
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat 0 0 !important;
+    height: 127px !important;
+}
+
+a#arrNext {
+    display: block;
+    width: 22px;
+    height: 77px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat -22px 0;
+    float: right;
+}
+
+a#arrNext:hover, a#arrNext:focus {
+    background: #49c5d9 url(../../../../../i/Eplayer/arrows_new.png) no-repeat -22px -77px;
+}
+
+div.container {
+
+    height: 77px;
+    border: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+div.container div.head {
+
+    height: 20px;
+    color: #424242;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 3px;
+}
+
+div.container div.head span {
+    font: normal 10px/22px Arial, Helvetica, sans-serif;
+    color: #666;
+    float: left;
+    font-weight: bold;
+}
+
+div.container div.head div.view-btn {
+    width: 41px;
+    height: 12px;
+    border: 1px solid #b1aeae;
+    float: right;
+    margin: 2px 3px 0 0;
+    position: relative;
+}
+
+div.container div.head div.view-btn a#thumbViewButton {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    border-right: 1px solid #b1aeae;
+    background: #9e9e9e url(../../../../../i/Eplayer/thumbnailview-btn.png) no-repeat 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*div.container div.head div.view-btn a#thumbViewButton:hover{ background-color: #49c5d9; }*/
+div.container div.head div.view-btn a#thumbViewButton:active,
+div.container div.head div.view-btn a#thumbViewButton.active {
+    background: #616161 url(../../../../../i/Eplayer/thumbnailview-btn.png) no-repeat 0 -12px;
+}
+
+div.container div.head div.view-btn a#listViewButton {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin: 0;
+    padding: 0;
+    background: #9e9e9e url(../../../../../i/Eplayer/listview-btn.png) no-repeat 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*div.container div.head div.view-btn a#listViewButton:hover{ background-color: #49c5d9; }*/
+div.container div.head div.view-btn a#listViewButton:active,
+div.container div.head div.view-btn a#listViewButton.active {
+    background: #616161 url(../../../../../i/Eplayer/listview-btn.png) no-repeat 0 -12px;
+}
+
+div.container div.carousel-holder {
+
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+div#carousel-canvas {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div#carousel-canvas ul.list-view {
+    display: block;
+    white-space: nowrap;
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div#carousel-canvas ul.list-view li {
+    display: block;
+    white-space: nowrap;
+    height: 20px;
+    margin: 0 0 2px 0;
+    background: transparent;
+}
+
+div#carousel-canvas ul.list-view li:last-of-type {
+    margin: 0;
+}
+
+.listElem{
+    color: #655f5f;
+    background: #fff;
+}
+
+div#carousel-canvas ul.list-view li a {
+    display: block;
+    height: 20px;
+    /* color: #655f5f; */
+    font: bold 10px/20px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: left;
+    /* background: #fff; */
+    margin: 0;
+    padding: 0 0px;
+    cursor: pointer;
+}
+
+div#carousel-canvas ul.list-view li a span {
+    color: #49c5d9;
+}
+
+div.container div.pageText {
+
+    height: 11px;
+    text-align: center;
+    font: normal 10px/11px Arial, Helvetica, sans-serif;
+    color: #414141;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.longBgPattern {
+    background: transparent url(../../../../../i/Eplayer/bg-pattern_130.png) repeat-x 0 0 !important;
+}
+
+div.clear {
+    width: 100%;
+    height: 0px !important;
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+div#carousel-canvas ul.thumb-view {
+    display: block;
+
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div#carousel-canvas ul.thumb-view li {
+    display: block;
+    width: auto;
+    height: 55px;
+    background: transparent;
+    float: left;
+    margin: 0 5px;
+    border: 2px solid #49c5d9;
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+}
+
+div#carousel-canvas ul.thumb-view li a {
+    cursor: pointer;
+    display: block;
+    width: auto;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+
+}
+
+div#carousel-canvas ul.thumb-view li a > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+div#carousel-canvas ul.thumb-view li a div > label{
+    max-height:30px;
+    min-height:20px;
+    float:left;
+    overflow: hidden;
+    cursor:pointer;
+    width: 100%;
+	padding: 0 1px 0 1px;
+}
+
+div#carousel-canvas ul.thumb-view li a div {
+    display: block;
+    width: 100%;
+    height: 22px;
+    color: #fff;
+    text-align: left;
+    font: normal 10px/22px Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .75);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 2px 0 0 0;
+    z-index: 2;
+    -webkit-transition: top 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out;
+    top:100%;
+    margin-top: -21px;
+    height: 100%;
+    line-height: 10px;
+}
+
+/* CAROUSEL CSS END  */
+
+/* FACEBOOKLINK CSS */
+
+.fb-link {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    font-family: tahoma;
+    position: absolute;
+}
+
+.fb-link .fb-link-bg {
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 20px;
+}
+
+.fb-link .fb-close-button {
+    float: right;
+    padding: 3px 7px 3px 7px;
+    display: block;
+    background: #44629e;
+    color: #FFF;
+    font-size: 11px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    width: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fb-link .fb-input-field {
+    position: absolute;
+    left: 10px;
+    right: 70px;
+    height: 20px;
+    border: none;
+    color: #44629e;
+    font-weight: bold;
+    padding: 0 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* FACEBOOKLINK CSS END  */
+
+/* NAVIGATION CSS */
+
+/************** video overlay ***********************/
+
+#videoOverlay {
+    position: absolute;
+    overflow: visible;
+}
+
+#videoOverlay.orientation-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#videoOverlay .nav-container,
+#videoOverlay .copy-link-container {
+    overflow: hidden;
+}
+
+#videoOverlayTitle {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    right: 5px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+}
+
+#adTitle {
+    position: absolute;
+    padding: 0px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+    display: none;
+    float: left;
+    text-align: center;
+    opacity: 0;
+}
+
+#ad_close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+    font-size: 11px;
+    background: #44629e;
+    border-radius: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+    display: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+/************** video controls **********************/
+
+#videoControls {
+    color: white;
+    font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+    /* overflow: hidden; */
+    height: 36px;
+}
+
+#videoControls.hidden {
+    height: 3px !important;
+}
+
+#videoControls .clip {
+    height: 36px;
+    width: 100%;
+    background-color: #000000;
+}
+
+#videoControls.small-controls .clip {
+    height: 26px;
+    background-color: #000000;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#videoControls.small-controls {
+    height: 26px;
+}
+
+#videoControls .progress {
+    position: relative;
+    background: #aaa;
+    height: 5px;
+    cursor: pointer;
+    z-index: 300;
+}
+
+#videoControls.hidden .progress {
+    height: 5px;
+}
+
+#videoControls .progress > div {
+    position: absolute;
+    height: 100%;
+    background: #49c5d9;
+    width: 0%;
+    cursor: pointer;
+}
+
+#videoControls .play-button {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    -webkit-transition: background 0.2s;
+    z-index: 202;
+    position: relative;
+}
+
+#videoControls .play-button * {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#videoControls .play-button > .play {
+    background-image: url(../../../../../i/Eplayer/play.png);
+    background-size: 45%;
+    background-position: center;
+}
+
+#videoControls .play-button > .pause {
+    background-image: url(../../../../../i/Eplayer/pause.png);
+    background-size: 45%;
+    background-position: center;
+}
+
+#videoControls.small-controls .play-button {
+    width: 21px;
+    height: 21px;
+    font-size: 16px;
+    position: relative;
+}
+
+/*
+#videoControls.mouse-control .play-button:hover {
+  background-color: rgba(73, 197, 217, 0.8);
+}
+*/
+
+#videoControls .play-button :hover {
+    background-color: rgba(73, 197, 217, 1);
+}
+
+#videoControls .play-button :active {
+    background-color: rgba(73, 197, 217, 1);
+}
+
+/* #videoControls .play-button .play,
+.playing #videoControls .play-button .pause {
+   display: inline-block;
+}
+ */
+.play-button.playing .play {
+    display: none;
+}
+
+.play-button.playing .pause {
+    display: block;
+}
+
+/* #videoControls .play-button .pause,
+.playing #videoControls .play-button .play {
+  display: none;
+}
+ */
+#videoControls .time {
+    padding: 0 2px;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+
+#videoControls.small-controls .time {
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+}
+
+#videoControls .time.elapsed {
+    color: #49c5d9;
+}
+
+#volumeControl{
+   
+margin-top: -80px;
+   
+background-color: black;
+   
+position: absolute;
+}
+
+#videoControls .right-button {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-left: 2px solid #aaa;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: background 0.2s;
+}
+
+#videoControls .right-button > div {
+    background-repeat: no-repeat;
+    width: 100%;
+    cursor: pointer;
+    background-position: center center;
+}
+
+#fullscreenIcon , #fullSizeIcon, #muteIcon , #copyLinkIcon, #browserIcon{
+    height: 100%;
+}
+
+#videoControls.small-controls .right-button {
+    width: 21px;
+    height: 21px;
+    font-size: 16px;
+}
+
+#videoControls.mouse-control .right-button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#videoControls.mouse-control .right-button:active {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#videoControls .toggle-fullscreen > div {
+    background-image: url(../../../../../i/Eplayer/fullscreen_new.png);
+}
+
+#videoControls .toggle-fullscreen:hover > div {
+    background-image: url(../../../../../i/Eplayer/fullscreen_new_over.png);
+}
+
+#videoControls .toggle-mute-on > #muteIcon {
+    background-image: url(../../../../../i/Eplayer/mute_on.png);
+    background-image: url(../../../../../i/Eplayer/mute_on.svg);
+    background-size: 85%;
+}
+
+#videoControls .toggle-mute-off > #muteIcon {
+    background-image: url(../../../../../i/Eplayer/mute_off.png);
+    background-image: url(../../../../../i/Eplayer/mute_off.svg);
+    background-size:85%;
+}
+
+#videoControls .toggle-navigation > div {
+    background-image: url(../../../../../i/Eplayer/toggle_navigation.svg);
+    background-size: contain;
+}
+
+#videoControls .copy-link > div {
+    background-image: url(../../../../../i/Eplayer/link_new.png);
+}
+
+.browserIconOpen {
+    background-image: url(../../../../../i/Eplayer/videobrowser_open.png);
+}
+
+.browserIconClose {
+    background-image: url(../../../../../i/Eplayer/videobrowser_close.png);
+}
+
+#browser {
+    display: none;
+}
+
+#videoControls .copy-link:hover > div {
+    background-image: url(../../../../../i/Eplayer/link_over_new.png);
+}
+
+/* NAVIGATION CSS END  */
+
+/* POSTCLIPVIEW CSS */
+
+#watchagain {
+    src: url('../../../../../i/Eplayer/eplayerhtml5/watchagain.png');
+}
+
+#facebookLeftColumn {
+    float: left;
+    width: 100%;
+    border-bottom: dotted 3px rgba(255, 255, 255, 0.5);
+    margin-bottom: 3px;
+}
+
+#facebookRightColumn {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+
+#facebookSign {
+    vertical-align: middle;
+    padding-top: 0px;
+}
+
+#refreshSign {
+    vertical-align: middle;
+    padding-top: 0px;
+    cursor: pointer;
+}
+
+#thumbImage {
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+}
+
+#fullSizeIcon {
+    background-image: url(../../../../../i/Eplayer/fullscreen80.png);
+}
+
+#volumeSlider {
+    position: absolute;
+    width: 4px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -2px;
+    bottom: 0;
+    pointer-events: none;
+}
+
+#volumeSliderBase {
+    position: absolute;
+    width: 4px;
+    background-color: #232222;
+    height: 95%;
+    left: 50%;
+    margin-left: -2px;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.zindex500{
+    z-index:500;
+}
+
+.zindex203{
+    z-index:203;
+}
+
+.displayNo{
+    display:none;
+    height:0;
+}
+
+.displayYes{
+    display:block;
+    height:80px;
+}
+
+
+/* POSTCLIPVIEW CSS END */
+

@@ -66,7 +66,8 @@ $().ready(function(){
 			$lastComment.append($comment.eq(i).clone());
 		}
 	}
-	cloneComment(0);
+	cloneComment(0); //Coge el primer comentario y lo añade al final "0 --> rserantes".
+	
 });
 
 
