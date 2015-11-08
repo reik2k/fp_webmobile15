@@ -1,0 +1,4 @@
+
+linkarr=[];
+	__initCortex(linkarr);
+

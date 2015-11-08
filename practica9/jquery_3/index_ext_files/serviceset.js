@@ -1,0 +1,6 @@
+
+var cazzdomain = (location.host.match(/([^.]+)\.\w{2,4}(?:\.\w{2})?$/) || [])[0];
+
+var cgcaservices="0";var cgcaproducts="0";var cgcarlinks="0";var cgcablinks="1";var cgcabextra="1";var cgcaamazon="1";var cgcasearch="1";var cgcarealtime="1";var cgcavideo="1"; var caamazon="0.018";var caversion="0.08";var cgbversion="0.043";var cgblink="0.018";
+var cgfuncv="0.08";
+if(window.location.protocol=="http:"){var castatic="http://"+(cazzdomain.replace(/\./g,"_"))+".comparinggenie.com";var cadomain="http://"+(cazzdomain.replace(/\./g,"_"))+".comparinggenie.com"}else{var castatic="https://"+(cazzdomain.replace(/\./g,"_"))+".comparinggenie.com";var cadomain="https://"+(cazzdomain.replace(/\./g,"_"))+".comparinggenie.com"}if(typeof(captype)=="undefined"){var captype="service"}if(typeof(cgdistributor)=="undefined"){var cgdistributor="1"}var cgservices="1";if(typeof(allversioncg)=="undefined"){var allversioncg=[cgservices]}else{if(allversioncg.indexOf(cgservices)<0){allversioncg.push(cgservices)}}cgdm=document.location.href;(function(){var a=document.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src",(window.location.protocol=="http:"?"http:":"https:")+"//www.comparinggenie.com/traffic.js?v="+cgbversion);document.getElementsByTagName("head")[0].appendChild(a)})();
