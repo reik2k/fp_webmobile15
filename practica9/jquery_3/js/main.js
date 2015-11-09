@@ -2,7 +2,7 @@ $().ready(function(){
 	
 	var url='http://www.genbeta.com/correo/google-relanza-la-aplicacion-nativa-de-gmail-para-ios-corrigiendo-el-error-de-las-notificaciones';
 	
-	//alert('Bienvenido al Máster de Telefonía de la USAL');
+	alert('Bienvenido al Máster de Telefonía de la USAL');
 	
 	//Ejercicio JS 2.1
 	var $a=$('a[href$="'+url+'"]');	
