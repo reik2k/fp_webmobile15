@@ -9,44 +9,45 @@
 	<main>
 		<section>
 			<form action"#" onsubmit="return false" 
-							oninput="	var calculateAge= parseInt(birthDate.value)-parseInt(currentDate.value);
-										if(!isNaN(calculateAge) && calculateAge > 0)
+							oninput="	var currentYear= new Date();
+										var calculateAge= -parseInt(birthDate.value)+parseInt(currentYear.getFullYear());
+										
+										if(!isNaN(calculateAge) && calculateAge >= 0)
 										{
-											age.value=calculateAge;
-										}else{age.value=' Please, write a valid date. Thanks.'}">
+											age.value=calculateAge + ' years old';
+										}else{age.value=' Please, write a valid date. Thanks. '}">
                 <fieldset>
                 <fieldset >
                     <legend>Personal data</legend>
-				    <input type="text" placeholder="name" maxlength="50" required/>
-				    <input type="text" placeholder="surname" maxlength="50" required/>
-                    <input type="text" placeholder="lastname" maxlength="50" />
+				    <pre>name: <input type="text" placeholder="name" maxlength="50" required/></pre>
+				    <pre>surname: <input type="text" placeholder="surname" maxlength="50" required/></pre>
+                    <pre>lastname: <input type="text" placeholder="lastname" maxlength="50" /></pre>
                 </fieldset >
                 <fieldset >
                     <legend>Address</legend>
-				    <input type="text" placeholder="street" maxlength="150" required/>
-				    <input type="number" placeholder="number" maxlength="3" min="1" max="300" required/>
-                    <input list="city" placeholder="city" required>
+				    <pre>street: <input type="text" placeholder="street" maxlength="150" required/></pre>
+				    <pre>number: <input type="number" placeholder="number" maxlength="3" min="1" max="300" required/></pre>
+                    <pre>city: <input list="city" placeholder="city" required></pre>
                     <datalist id="city">
                         <option value="Le&oacute;n"/>
                         <option value="Zamora"/>
                         <option value="Salamanca"/>
                     </datalist>
-                    <input list="province" placeholder="province" required>
+                    <pre>province: <input list="province" placeholder="province" required></pre>
                     <datalist id="provincia">
                         <option value="Le&oacute;n"/>
                         <option value="Zamora"/>
                         <option value="Salamanca"/>
                     </datalist>
-                    <input type="number" placeholder="Postal Code" maxlength="5" min="10000" max="50000" required/>
+                    <pre>Postal Code: <input type="number" placeholder="Postal Code" maxlength="5" min="10000" max="50000" required/></pre>
                 </fieldset>
                 <fieldset >
                     <legend>Personal data 2</legend>
-                    <input type="number" placeholder="weigth" step="5" min="5" max="110"/>
-                    <input id="currentDate" type="number" value="2015" min="1911"/>
-                    <input id="birthDate" type="date" placeholder="birthdate"  min=”1970-01-01” max=”2015-11-02” required/>
-                    Age: <output name="age" 
+                     <pre>weigth: <input type="number" placeholder="weigth" step="5" min="5" max="110"/></pre>
+                     <pre>birthdate: <input id="birthDate" type="date" placeholder="birthdate"  min=”1970-01-01” max=”2015-11-02” required/></pre>
+                     <pre>Your Age: <output name="age" 
                     		placeholder="age"  
-                    		onforminput=""></output>
+                    		onforminput=""></output></pre>
                 </fieldset >
                 <button >send</button>
                 </fieldset>

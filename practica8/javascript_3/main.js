@@ -1,6 +1,7 @@
 javascript:
 var INFO='[info] ';
-var colScore=document.getElementsByClassName('f');//Tabla con valores de Goles a Favor
+//var colScore=document.getElementsByClassName('f');//Tabla con valores de Goles a Favor
+var colName=document.getElementsByClassName('equipo');
 var arrayScore=[];
 var maxScore=0;
 
@@ -22,3 +23,5 @@ for(i in arrayScore)
 		console.log(INFO + 'Score: ' + arrayScore[i] + ' Position: ' + i);
 	}
 }
+
+

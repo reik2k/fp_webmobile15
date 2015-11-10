@@ -12,38 +12,37 @@ for(var i in a)
 }
 
 /*EJERCICIO 2.2 Eliminar IMG*/
-javascript:var img=document.getElementsByTagName('img'); var i = 0;
+javascript:var img=document.getElementsByTagName('img');
 console.log("Elementos " + img.length);
 
-for(i=0;i<img.length;i++)
+for(var i in img)
 {
-	console.log(img[i].getAttribute('src'));
-	if(img[i].getAttribute('src')=='http://i.blogs.es/2cc1d9/gmailwebmovil/1366_2000.jpg')
+	if(img[i].getAttribute('src')=='http://i.blogs.es/2cc1d9/gmailwebmovil/450_1000.jpg')
 	{
 		var dad=img[i].parentNode;
 		dad.removeChild(img[i]);
-		console.log("Imagen eliminada");
+		console.log("Imagen eliminada: ");
 	}
 }
 
-/* EJERCICIO 2.3 Obtener autores de las noticias*/p[i].firstChild.innerHTML
-javascript:var p=document.getElementsByClassName("comment-author-name");
-console.log(p.length);
-for(i=0;i<p.length;i++)
+/* EJERCICIO 2.3 Obtener autores de las noticias*/
+javascript:var h3=document.getElementsByClassName("comment-author-name");
+for(i in h3)
 {
-	console.log('Authores: ' + p[i].textContent);
+	if(i< (h3.length-1))
+	{
+		console.log(h3[i].firstChild.innerHTML);
+	}
 }
 /*Obtener autor pasando el enlace a la noticia*/
-javascript:
-function autor(p)
+function autor(h3)
 {
-	console.log(p.textContent);
+	console.log(h3[i].firstChild.innerHTML);
 }
-var comment=document.getElementsByClassName("comment-author-name");
-autor(comment[1]);//autor del primer comentario
+autor(document.getElementsByClassName("comment-author-name"));
 
-/*EJERCICIO 2.4 Copiar el último commentario*/
-javascript:var dad=document.getElementById('comments-list');
+/*EJERCICIO 2.4 Copiar el Ãºltimo commentario*/
+javascript:var dad=document.getElementsByClassName('comment-list')[0];
 console.log(dad.childNodes.length);
 var childNodes=dad.childNodes;
 var a=true;
@@ -56,4 +55,3 @@ for(i in childNodes)
 		dad.insertBefore(childNodes[i].cloneNode(true),childNodes[i]);
 	}
 }
-
