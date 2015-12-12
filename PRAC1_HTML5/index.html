@@ -87,6 +87,16 @@
 			<form role="form" data-toggle="validator" class="form-horizontal">
 				<fieldset>
 					<legend>Client Form</legend>
+					<div id="result">
+						<div id="success" class="alert alert-success fadein" role="alert">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Success!</strong>
+						</div>
+						<div id="fail" class="alert alert-danger fadein" role="alert">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Fail!</strong>
+						</div>
+					</div>
 					<div class="form-group required">
 						<label for="name" class="col-sm-2 control-label">name</label>
 						<div class="col-md-5">
@@ -141,21 +151,11 @@
 					<div class="form-group">
 						<div class="col-md-2"></div>
 						<div class="col-md-5">
-							<input type="submit" class="btn btn-info btn-md btn-block" value="send"/>
+							<input type="submit" class="btn btn-info btn-md btn-block disabled" value="send"/>
 						</div>
 					</div>
 				</fieldset>
 			</form>
-			<div id="result">
-				<div id="success" class="alert alert-success fadein" role="alert">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>Success!</strong>
-				</div>
-				<div id="fail" class="alert alert-danger fadein" role="alert">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>Fail!</strong>
-				</div>
-			</div>
 		</section>
 	  </main>
 	  <div id="offline" class="offonline"><h1>NO INTERNET <br/>:-(</h1><!--img src="images/offline.jpg"/--></div>

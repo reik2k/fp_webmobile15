@@ -27,7 +27,7 @@ function()
 		
 		//List Customers
 		listClientsParse();
-										
+		
 		$addCus.on({
 			click:function(){
 					$online.fadeOut("fast");
@@ -40,7 +40,7 @@ function()
 		$listCus.on({
 			click:function(){
 						$online.fadeOut("fast");
-						$list.delay(500).toggle("slow");								
+						$list.delay(500).toggle("slow");						
 					},
 			mouseenter:function(){$(this).addClass("active")},
 			mouseleave:function(){$(this).removeClass("active")}
@@ -49,15 +49,30 @@ function()
 		//It will send info to ParseDB
 		$inpSend.click(function()
 		{
-			if(this.getAttribute('class').indexOf('disable')<20)
+			var $inpRequired =  $('input').attr('required',true);
+			var result = true;
+			
+			$.each($inpRequired,function(i,v)
+			{
+				if($inpRequired.eq(i).val() == '')
+				{
+					result=false;
+				}
+					
+			});
+			
+			console.log(INFO + result);
+			
+			if((this.getAttribute('class').indexOf('disabled')==-1)&&result)
 			{
 				clientObject();
+				this.val()='send';
 			}				
 		});
 			
 	}else{
-		$addCus.removeClass('active').addClass('disable');
-		$listCus.removeClass('active').addClass('disable');
+		$addCus.removeClass('active').addClass('disabled');
+		$listCus.removeClass('active').addClass('disabled');
 		$online.hide();
 	}
 	
@@ -177,7 +192,6 @@ function()
 					
 					var address = cus.get('address')+ ' ' + cus.get('postCode') + ' ' +cus.get('province');
 					$($table).on('click','#find'+i,address,function(e){findCustomer(e);});
-					
 				}
 			},
 			error:function(res,error)
@@ -310,16 +324,34 @@ function()
 		Name: refreshTable
 		Pruporse: It updates Customer info in the table.
 		Dependencies:
-			--> listClientsParse() 
+			--> listClientsParse()
+			--> cleanForm()
 	*/
 	function refreshTable()
 	{
 		var $table=$('tbody').children();
 		$.each($table,function(i,v)
 			{
-				$table.eq(i).remove();		
+				$table.eq(i).remove();
+				console.log(INFO + 'table remove ' + i);			
 			});
+		
 		listClientsParse();
+		cleanForm();
+	}
+	
+	/*
+		Name: cleanForm
+		Pruporse: removes all values
+	*/
+	function cleanForm()
+	{
+		var $inp=$('input');
+		$.each($inp,function(i,v)
+			{
+				$inp.eq(i).val("");	
+				console.log(INFO + 'INPUT2Clean ' + i);	
+			});
 	}
 });
 
