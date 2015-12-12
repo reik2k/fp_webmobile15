@@ -1,0 +1,27 @@
+body {
+    padding: 50px;
+}
+nav{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#customers, #list, #success, #fail 
+{
+	display: none;
+}
+#map
+{
+	display: block;
+	background-color: white;
+	width: 100%;
+	height: 400px;
+}
+.offonline
+{
+	text-align: center;
+	color: #d8d8d8;
+	text-shadow: 1px 1px 0px #e5e5ee;	
+	overflow:auto;
+	width: 100%;
+	height: 100%;
+}

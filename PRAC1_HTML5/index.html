@@ -1,0 +1,168 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>PRAC01_HTML5</title>
+  <meta name="author" content="Abel Prieto Beneitez"> 
+  <meta name="description" content="Practica en html5 para el Master de movilidad de la USAL.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--Bootstrap required those next tags-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- BOOTSTRAP CSS-->
+  <link rel="stylesheet" href="js/libs/bootstrap/dist/css/bootstrap.min.css">
+  
+  <!--FONTAWESOME CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <!--JQUERY-->
+  <script type="text/javascript" src="js/libs/jquery/dist/jquery.min.js"></script>
+  
+  <!--PARSE CDN-->
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  
+  <!--GOOGLEMAP-->
+  <script src="https://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/libs/gmaps/gmaps.js"></script>  
+  
+  <!--BOOTSTRAP JS-->
+  <script type="text/javascript" src="js/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div>
+	  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="nav-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+	            	data-target=".navbar-ex1-collapse">
+			      <span class="sr-only">Desplegar navegación</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			</button>    
+			<a class="navbar-brand" href="#">Pr&aacute;ctica Final</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#customers">Add Clients</a></li>
+			  <li><a href="#">List Customers</a></li>
+			</ul>
+		</div>
+	  </nav>
+	  <main class="container">
+	  	<div class="jumbotron page-header"><h2>Pr&aacute;ctica HTML5<p><small>Abel Prieto Ben&eacute;itez</small><p></h2></div>
+		<section id="list">
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<legend >Clients List</legend>
+					<thead>
+						<th>ObjectId</th>
+						<th>Name</th>
+						<th>Surname</th>
+						<th>Lastname</th>
+						<th>Address</th>
+						<th>PostCode</th>
+						<th>Province</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<div id="map"></div>
+		</section>
+		<section id="customers">
+			<form role="form" data-toggle="validator" class="form-horizontal">
+				<fieldset>
+					<legend>Client Form</legend>
+					<div class="form-group required">
+						<label for="name" class="col-sm-2 control-label">name</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" maxlenght="60" placeholder="Abel" data-error="Missing name" required>
+						</div>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="form-group">
+						<label for="surname" class="col-sm-2 control-label">surname</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" maxlength="60" placeholder="Prieto" data-error="Missing surname" required>
+						</div>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="form-group">
+						<label for="lastname" class="col-sm-2 control-label">lastname</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" maxlength="60" placeholder="Beneitez">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="addres" class="col-sm-2 control-label">address</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" maxlength="120" placeholder="Plaza Poniente" data-error="Missing address" required>
+						</div>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="form-group">
+						<label for="postcode" class="col-sm-2 control-label">postcode</label>
+						<div class="col-md-5">
+							<input type="number" class="form-control" min="1000" max="52000" placeholder="47003" data-error="Missing postcode" required>
+							<span class="help-block">Postcode [01-52] <a href="" target="_blank"></a></span>
+						</div>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="form-group">
+						<label for="createDate" class="col-sm-2 control-label">created date</label>
+						<div class="col-md-5">
+							<input type="date" class="form-control" placeholder="2015-01-01"/>
+							<span class="help-block">Format: YYYY-MM-DD</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="province" class="col-sm-2 control-label">province</label>
+						<div class="col-md-5">
+							<input type="text" list="province" class="form-control" maxlength="60" placeholder="Valladolid" data-error="Missing province" required>
+							<datalist id="province">
+							</datalist>
+						</div>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="form-group">
+						<div class="col-md-2"></div>
+						<div class="col-md-5">
+							<input type="submit" class="btn btn-info btn-md btn-block" value="send"/>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<div id="result">
+				<div id="success" class="alert alert-success fadein" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Success!</strong>
+				</div>
+				<div id="fail" class="alert alert-danger fadein" role="alert">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Fail!</strong>
+				</div>
+			</div>
+		</section>
+	  </main>
+	  <div id="offline" class="offonline"><h1>NO INTERNET <br/>:-(</h1><!--img src="images/offline.jpg"/--></div>
+	  <div id="online" class="offonline"><h2>YOU HAVE INTERNET <h2> <p> Make click over Options in Nav Menu. <p/> <h1>:-)</h1></div>
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/libs/bootstrap/js/validator.js"></script>
+</body>
+
+</html>
